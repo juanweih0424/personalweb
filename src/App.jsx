@@ -1,11 +1,13 @@
-import { useState } from 'react' 
-import Test from './test/Test.jsx'
+import Header from './component/Header.jsx'
+import Intro from './component/Intro.jsx'
+
 function App() {
 
   return (
-    <>
-      <Test/>
-    </>
+    <div>
+      <Header />
+      <Intro />
+    </div>
   )
 }
 

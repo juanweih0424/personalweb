@@ -1,0 +1,6 @@
+body {
+    margin: 0; /* Removes default margin */
+    height: 100vh; /* Sets minimum height to full viewport */
+    background-color: hsl(0, 0%, 100%);
+  }
+  
