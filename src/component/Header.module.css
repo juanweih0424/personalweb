@@ -1,63 +1,139 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-.nav {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 0 20px; 
-    background: #ffffff; 
-    color: #000000; 
-    align-items: center;
-    height: 84px;
-    margin-top: 50px;
-    margin-left: 150px;
-    margin-right: 150px;
-  }
-  
-  .nav ul {
-    list-style-type: none; 
-    display: flex; 
-    margin: 0; 
-    padding: 10px; 
-    align-items: center;
-  }
-  
-  .nav li {
-    margin: 0 10px;
-    min-width: 60px; 
-    flex: 0 0 auto; 
-    flex-shrink: 0;
-    padding: 10px;
-  }
-  
-  .nav a {
-    color: #000000; 
-    text-decoration: none; 
-  }
-  
-  .nav a:hover {
-    text-decoration: underline; 
-  }
+.name{
+  font-family:"Poppins", sans-serif; 
+  font-size: 2.5rem;
+}
+
+.name:hover{
+  cursor: default;
+}
+
+.navbtn{
+  color: black;
+  background-color: white;
+  display:none;
+  font-size: 2rem;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.navbtn:active {
+  transform: scale(0.95);
+}
+
+.logo, .desktopmenu{
+  display: flex;
+  flex-direction: row;
+  min-height: 200px
+}
 
 
-  .header{
-    font-size: 30px;
-    font-family: "Averia Serif Libre", serif;
-    font-weight: 400;
-    font-style: normal;
-    justify-content: space-between;
-    display: flex;
-    padding:10px 0px;
+.logo{
+  flex: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height:17vh;
+  min-width: 500px;
+}
+
+
+.desktopmenu{
+  gap:2rem;
+  list-style-type:none;
+  margin-top: 150px;
+}
+
+a{
+  text-decoration: none;
+  text-decoration-color: white;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+a:hover{
+  text-decoration: underline;
+  transform: scale(0.95);
+}
+
+.fullscreenNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-color: rgb(49, 135, 185); 
+  z-index: 1000; 
+  display:none;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease; 
+}
+
+
+.fullscreenNav ul {
+  list-style: none;
+}
+
+.fullscreenNav ul li {
+  margin: 1rem;
+
+}
+.fullscreenNav ul li a {
+  text-decoration: none;
+  color: white; 
+  font-size: 2rem; 
+}
+
+.fullscreenNav a:hover {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bodyPush {
+  transition: margin-left 0.3s ease;
+  margin-left: 250px; /* Same as the width of the sidebar */
+}
+
+
+@media screen and (max-width:1024px) {
+  .desktopmenu{
+    display: none;
   }
 
-  .name{
-    font-size:40px;
-    font-family: "Staatliches", sans-serif;
-    white-space: nowrap;
-    margin-right: 250px;
+  .fullscreenNav{
+    display: block;
+    min-width: 240px;
   }
+
+  .navbtn{
+    display: block;
+  }
+}
+
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0); 
+  z-index: 999; 
+}
