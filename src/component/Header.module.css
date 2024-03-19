@@ -5,6 +5,7 @@
 .name{
   font-family:"Poppins", sans-serif; 
   font-size: 2.5rem;
+  margin-left: 10%;
 }
 
 .name:hover{
@@ -19,32 +20,29 @@
   border: 0;
   cursor: pointer;
   transition: transform 0.1s ease;
+  margin-right: 10%;
 }
 
 .navbtn:active {
   transform: scale(0.95);
 }
 
-.logo, .desktopmenu{
+.logo{
   display: flex;
   flex-direction: row;
-  min-height: 200px
-}
-
-
-.logo{
-  flex: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height:17vh;
-  min-width: 500px;
+  min-width: 300px;
 }
 
 
 .desktopmenu{
+  flex-direction: row;
+  display: flex;
   gap:2rem;
   list-style-type:none;
-  margin-top: 150px;
+  margin-right: 10%;
 }
 
 a{
@@ -66,14 +64,13 @@ a:hover{
   position: fixed;
   top: 0;
   left: 0;
-  width: 30%;
+  width: 25%;
   height: 100%;
   background-color: rgb(49, 135, 185); 
   z-index: 1000; 
   display:none;
-  justify-content: center;
-  align-items: center;
   animation: fadeIn 0.5s ease; 
+  min-width: 250px;
 }
 
 
@@ -89,11 +86,17 @@ a:hover{
   text-decoration: none;
   color: white; 
   font-size: 2rem; 
+  font-family:"Poppins", sans-serif; 
 }
 
 .fullscreenNav a:hover {
   text-decoration: underline;
   font-weight: 500;
+}
+
+.hamburger{
+  display:flex;
+  flex-direction: column;
 }
 
 
@@ -108,7 +111,7 @@ a:hover{
 
 .bodyPush {
   transition: margin-left 0.3s ease;
-  margin-left: 250px; /* Same as the width of the sidebar */
+  margin-left: 260px; /* Same as the width of the sidebar */
 }
 
 
@@ -119,7 +122,6 @@ a:hover{
 
   .fullscreenNav{
     display: block;
-    min-width: 240px;
   }
 
   .navbtn{

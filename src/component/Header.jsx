@@ -33,7 +33,7 @@ export default function Header() {
     }
 
     return (
-        <div>
+        <div className={styles.header}>
             <div className={styles.logo}>
                 <div className={styles.name}>Juanwei Hu</div>
                 <button onClick={toggleMenu} className={styles.navbtn} title="Menu">
@@ -52,7 +52,7 @@ export default function Header() {
             {open && (
                 
             <div className={styles.fullscreenNav}>
-                <ul>
+                <ul className={styles.hamburger}>
                     <li><a href="#about" onClick={toggleMenu}>About</a></li>
                     <li><a href="#skills" onClick={toggleMenu}>Skills</a></li>
                     <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
