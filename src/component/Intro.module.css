@@ -1,13 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family:"Poppins", sans-serif; 
+}
+
 .container{
+    padding-top: 4vh;
+    height:40vh;
+    margin:0, 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
-    margin: 10% 20%; 
-    min-height: 300px;
-    min-width: 1000px;
-    margin-bottom: 5%;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.picContainer{
+    display:flex;
+    height:330px;
+    width:330px;
+    align-self: center;
 }
 
 .profile{
@@ -18,49 +30,76 @@
 }
 
 .textContainer{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 8%;
+    align-self: center;
     text-align: center;
 }
 
 .title{
-    font-size:40px;
-    font-family: "Staatliches", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
-.subtitle{
-    font-size: 22px;
-    font-family: "Averia Serif Libre", serif;
+.info{
+    font-size: 1.5rem;
     font-weight: 400;
-    font-style: normal;
-    color:rgb(61, 58, 58)
+    color: rgb(50, 54, 54);
 }
 
-.title,
-.subtitle{
-    margin:0;
-    padding: 5px 0px;
+.iconContainer{
+    display:flex;
+    justify-content: center;
 }
 
-.github,
+
+.linkedin, .github {
+    margin-top: 1vh;
+    margin-right: 20px; 
+}
+
 .linkedin{
-    font-size: 50px;
+    color: rgb(47, 95, 184);
+    font-size: 3rem;
 }
 
 .github{
-    color: black;
+    font-size: 3rem;
 }
 
-.linkedin{
-    color:rgb(46, 110, 194);
-}
+@media screen and (max-width:1024px) {
+    .container {
+        flex-direction: column;
+        padding-top: 2vh; /* Reduce the top padding if necessary */
+        gap: 2rem; /* Increase gap for more space between elements */
+        align-items: center; /* This centers the children horizontally */
+    }
 
-.icons{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 10px;
+    .picContainer {
+        width: 200px; /* Optional: Resize the picture container for smaller screens */
+        height: 200px;
+    }
+
+    .profile {
+        height: 200px;
+        width:200px; /* Make the image responsive */ /* Maintain aspect ratio */
+    }
+
+    .linkedin{
+        color: rgb(47, 95, 184);
+        font-size: 2rem;
+    }
+    
+    .github{
+        font-size: 2rem;
+    }
+
+    .title{
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    
+    .info{
+        font-size: 1.0rem;
+        font-weight: 400;
+        color: rgb(50, 54, 54);
+    }
 }

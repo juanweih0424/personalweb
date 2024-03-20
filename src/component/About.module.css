@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    font-family:"Poppins", sans-serif; 
+}
+
+.container{
+    padding-top: 8vh;
+    padding-left:4vh;
+    padding-right:4vh;
+}
+
+.title{
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sectionContainer{
+    padding-left: 5rem;
+    padding-right:5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picContainer{
+    display:flex;
+    height: 300px;
+    width: 376px;
+    box-sizing: border-box;
+    margin-right:5rem;
+}
+
+.pic{
+    border-radius: 8%;
+}
+
+.wrapper{
+    display:flex;
+}
+
+.aboutContainer{
+    border: 2px solid rgb(78, 75, 75);
+    width:400px;
+    border-radius: 15%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:25px;
+}
+
+.degree{
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.school{
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: rgb(58, 56, 54);
+}
+
+@media screen and (max-width:1024px) {
+    .sectionContainer{
+        flex-direction: column;
+    }
+
+    .wrapper{
+        margin-top: 3rem;
+    }
+
+    .picContainer{
+        width: 300px;
+        height: 250px;
+        margin-right:0;
+    }
+}
