@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    font-family:"Poppins", sans-serif; 
+}
+
+.container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10rem;
+  }
+
+
+.title {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.projectContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.project{
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px;
+    padding: 30px;
+    border: 2px solid rgb(73, 69, 69);
+    border-radius: 5%;
+    height: 60%;
+    width: 30%;
+}
+
+.pics{
+    max-height: 100%; 
+    max-width: 100%;
+    height: auto; /* This will maintain the aspect ratio */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-right:0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.btn{
+    background-color: white;
+    color: rgb(8, 8, 8);
+    border: 2px solid rgb(68, 64, 64);
+    border-radius: 15px;
+    font-size: 30%;
+    font-weight: 600;
+    margin: 5px;
+    padding: 5px;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+}
+
+.intro p{
+    margin-bottom: 3%;
+    text-align:left;
+    color:black;
+    font-size:2.3vh;
+}
+
+.intro p:first-child{
+    margin-top: 10px;
+}
+
+.project p{
+    font-weight: 500;
+    color:black;
+}
+
+@media screen and (max-width:1024px) {
+
+    .wrapper{
+        flex-direction: column;
+    }
+    .wrapper{
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .project{
+        width: 90%; 
+        align-items: center; 
+        margin-left:0;
+        margin-bottom: 20px;
+    }
+    
+    .project p, .project button {
+        text-align: center; 
+    }
+
+    .intro p{
+        font-size:2.3vh;
+    }
+
+    .project p{
+        font-weight: 500;
+        color:black;
+        font-size:24px;
+    }
+
+    .container{
+        margin-left:0px;
+    }
+}
